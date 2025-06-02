@@ -156,6 +156,19 @@ wheels = [
 ]
 
 [[package]]
+name = "django-redis"
+version = "5.4.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "django" },
+    { name = "redis" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/83/9d/2272742fdd9d0a9f0b28cd995b0539430c9467a2192e4de2cea9ea6ad38c/django-redis-5.4.0.tar.gz", hash = "sha256:6a02abaa34b0fea8bf9b707d2c363ab6adc7409950b2db93602e6cb292818c42", size = 52567 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/b7/f1/63caad7c9222c26a62082f4f777de26389233b7574629996098bf6d25a4d/django_redis-5.4.0-py3-none-any.whl", hash = "sha256:ebc88df7da810732e2af9987f7f426c96204bf89319df4c6da6ca9a2942edd5b", size = 31119 },
+]
+
+[[package]]
 name = "django-rest-framework"
 version = "0.1.0"
 source = { registry = "https://pypi.org/simple" }
@@ -368,42 +381,70 @@ version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
     { name = "asgiref" },
+    { name = "certifi" },
+    { name = "cffi" },
+    { name = "charset-normalizer" },
     { name = "click" },
+    { name = "cryptography" },
+    { name = "defusedxml" },
     { name = "django" },
     { name = "django-mysql" },
+    { name = "django-redis" },
     { name = "django-rest-framework" },
     { name = "djangorestframework" },
     { name = "djangorestframework-simplejwt" },
     { name = "dotenv" },
     { name = "h11" },
+    { name = "idna" },
     { name = "mysqlclient" },
+    { name = "oauthlib" },
+    { name = "pycparser" },
     { name = "pyjwt" },
     { name = "pymysql" },
+    { name = "python-dotenv" },
+    { name = "python3-openid" },
     { name = "redis" },
     { name = "requests" },
+    { name = "requests-oauthlib" },
     { name = "social-auth-app-django" },
+    { name = "social-auth-core" },
     { name = "sqlparse" },
+    { name = "urllib3" },
     { name = "uvicorn" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "asgiref", specifier = "==3.8.1" },
+    { name = "certifi", specifier = "==2025.4.26" },
+    { name = "cffi", specifier = "==1.17.1" },
+    { name = "charset-normalizer", specifier = "==3.4.2" },
     { name = "click", specifier = "==8.2.1" },
+    { name = "cryptography", specifier = "==45.0.3" },
+    { name = "defusedxml", specifier = "==0.7.1" },
     { name = "django", specifier = "==5.2.1" },
     { name = "django-mysql", specifier = "==4.17.0" },
+    { name = "django-redis", specifier = "==5.4.0" },
     { name = "django-rest-framework", specifier = "==0.1.0" },
     { name = "djangorestframework", specifier = "==3.16.0" },
     { name = "djangorestframework-simplejwt", specifier = "==5.5.0" },
-    { name = "dotenv", specifier = ">=0.9.9" },
+    { name = "dotenv", specifier = "==0.9.9" },
     { name = "h11", specifier = "==0.16.0" },
+    { name = "idna", specifier = "==3.10" },
     { name = "mysqlclient", specifier = "==2.2.7" },
+    { name = "oauthlib", specifier = "==3.2.2" },
+    { name = "pycparser", specifier = "==2.22" },
     { name = "pyjwt", specifier = "==2.9.0" },
     { name = "pymysql", specifier = "==1.1.1" },
-    { name = "redis", specifier = ">=6.1.0" },
-    { name = "requests", specifier = ">=2.32.3" },
-    { name = "social-auth-app-django", specifier = ">=5.4.3" },
+    { name = "python-dotenv", specifier = "==1.1.0" },
+    { name = "python3-openid", specifier = "==3.2.0" },
+    { name = "redis", specifier = "==6.1.0" },
+    { name = "requests", specifier = "==2.32.3" },
+    { name = "requests-oauthlib", specifier = "==2.0.0" },
+    { name = "social-auth-app-django", specifier = "==5.4.3" },
+    { name = "social-auth-core", specifier = "==4.6.1" },
     { name = "sqlparse", specifier = "==0.5.3" },
+    { name = "urllib3", specifier = "==2.4.0" },
     { name = "uvicorn", specifier = "==0.34.2" },
 ]
 
