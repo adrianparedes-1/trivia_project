@@ -1,14 +1,14 @@
-from django.views import View
 from rest_framework.viewsets import ModelViewSet
-from django.http import HttpResponse
+from rest_framework.views import APIView
+from rest_framework.response import Response
 from . import serializer, models
 from rest_framework.permissions import IsAuthenticated
 
-class TestView(View):
+class TestView(APIView):
     
-    def get(self, request):
+    async def get(self, request):
         print(request.headers)
-        return HttpResponse(
+        return Response(
             'hello world'
         )
 
